@@ -18,6 +18,7 @@ public class OutLog {
 
     public static void print(String tag, String msg) {
         if (msg.length() > 3000) {
+            Log.d(tag, "\r\n\r\n\r\n\r\n\r\n------------------------------------>>");
             int len = msg.length();
             int devideNumber = len / 3000;
             int j = 0;
@@ -26,7 +27,9 @@ public class OutLog {
                 j += 3000;
             }
             d(tag, msg.substring(j, msg.length()));
+            Log.d(tag, "\r\n\r\n\r\n\r\n\r\n<<------------------------------------");
         } else {
+            Log.d(tag, "\r\n\r\n\r\n\r\n\r\n<<<------------------------------------>>>");
             d(tag, msg);
         }
     }
