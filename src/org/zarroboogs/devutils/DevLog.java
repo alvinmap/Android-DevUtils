@@ -3,7 +3,7 @@ package org.zarroboogs.devutils;
 
 import android.util.Log;
 
-public class OutLog {
+public class DevLog {
     private static void d(String tag, String msg) {
         if (msg.trim().contains("\n")) {
             String[] lineStrings = msg.split("\n");
@@ -16,7 +16,7 @@ public class OutLog {
 
     }
 
-    public static void print(String tag, String msg) {
+    public static void printLog(String tag, String msg) {
         if (msg.length() > 3000) {
             Log.d(tag, "\r\n\r\n\r\n\r\n\r\n------------------------------------>>");
             int len = msg.length();
