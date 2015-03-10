@@ -14,17 +14,17 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
     private AsyncHttpClient mAsyncHttpClient = new AsyncHttpClient();
 
-    abstract void onPostSuccess(String response);
+    public abstract void onPostSuccess(String response);
 
-    abstract void onPostFailed(String error);
+    public abstract void onPostFailed(String error);
 
-    abstract void onGetSuccess(String response);
+    public abstract void onGetSuccess(String response);
 
-    abstract void onGetFailed(String error);
+    public abstract void onGetFailed(String error);
 
-    abstract void onRequestStart();
+    public abstract void onRequestStart();
 
-    protected void asyncHttpGet(String url) {
+    public void asyncHttpGet(String url) {
         mAsyncHttpClient.get(url, new AsyncHttpResponseHandler() {
 
             @Override
@@ -39,7 +39,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
         });
     }
 
-    protected void asyncHttpGet(String url, RequestParams params) {
+    public void asyncHttpGet(String url, RequestParams params) {
         mAsyncHttpClient.get(url, params, new AsyncHttpResponseHandler() {
 
             @Override
@@ -54,7 +54,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
         });
     }
 
-    protected void asyncHttpGet(String url, Header[] headers, RequestParams params) {
+    public void asyncHttpGet(String url, Header[] headers, RequestParams params) {
         mAsyncHttpClient.get(getApplicationContext(), url, headers, params, new AsyncHttpResponseHandler() {
 
             @Override
@@ -69,7 +69,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
         });
     }
 
-    protected void asyncHttpPost(String url) {
+    public void asyncHttpPost(String url) {
         mAsyncHttpClient.post(url, new AsyncHttpResponseHandler() {
 
             @Override
@@ -84,7 +84,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
         });
     }
 
-    protected void asyncHttpPost(String url, RequestParams params) {
+    public void asyncHttpPost(String url, RequestParams params) {
         mAsyncHttpClient.post(url, params, new AsyncHttpResponseHandler() {
 
             @Override
@@ -99,7 +99,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
         });
     }
 
-    protected void asyncHttpPost(String url, HttpEntity entity, String contentType) {
+    public void asyncHttpPost(String url, HttpEntity entity, String contentType) {
         mAsyncHttpClient.post(getApplicationContext(), url, entity, contentType, new AsyncHttpResponseHandler() {
 
             @Override
@@ -114,7 +114,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
         });
     }
 
-    protected void asyncHttpPost(String url, Header[] headers, HttpEntity entity, String contentType) {
+    public void asyncHttpPost(String url, Header[] headers, HttpEntity entity, String contentType) {
         mAsyncHttpClient.post(getApplicationContext(), url, headers, entity, contentType, new AsyncHttpResponseHandler() {
 
             @Override
@@ -129,7 +129,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
         });
     }
 
-    protected void asyncHttpPost(String url, Header[] headers, RequestParams params, String contentType) {
+    public void asyncHttpPost(String url, Header[] headers, RequestParams params, String contentType) {
         mAsyncHttpClient.post(getApplicationContext(), url, headers, params, contentType, new AsyncHttpResponseHandler() {
 
             @Override
@@ -144,7 +144,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
         });
     }
 
-    protected void asyncHttpPost(String url, HttpEntity entity, String contentType, RequestParams params) {
+    public void asyncHttpPost(String url, HttpEntity entity, String contentType, RequestParams params) {
         mAsyncHttpClient.post(getApplicationContext(), url, entity, contentType, new AsyncHttpResponseHandler() {
 
             @Override
