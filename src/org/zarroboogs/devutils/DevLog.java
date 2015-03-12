@@ -33,4 +33,22 @@ public class DevLog {
             d(tag, msg);
         }
     }
+
+    /**
+     * description: 打印函数调用关系
+     * @param tag
+     * @editer
+     */
+    public static void printStackTraces(boolean isDebug, String tag) {
+        if (!isDebug) {
+            return;
+        }
+        Log.d(tag, "stack start ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        java.util.Map<Thread, StackTraceElement[]> ts = Thread.getAllStackTraces();
+        StackTraceElement[] ste = ts.get(Thread.currentThread());
+        for (StackTraceElement s : ste) {
+            Log.d(tag, "" + s);
+        }
+        Log.d(tag, "stack end------------------------------------------------------------------");
+    }
 }
