@@ -16,15 +16,15 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
     public abstract void onPostSuccess(String response);
 
-    public abstract void onPostFailed(String error);
+    public abstract void onPostFailed(String requestUrl , String error);
 
     public abstract void onGetSuccess(String response);
 
-    public abstract void onGetFailed(String error);
+    public abstract void onGetFailed(String requestUrl, String error);
 
     public abstract void onRequestStart();
 
-    public void asyncHttpGet(String url) {
+    public void asyncHttpGet(final String url) {
         mAsyncHttpClient.get(url, new AsyncHttpResponseHandler() {
 
             @Override
@@ -34,12 +34,12 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onGetFailed(arg3.getMessage());
+                onGetFailed(url,arg3.getMessage());
             }
         });
     }
 
-    public void asyncHttpGet(String url, RequestParams params) {
+    public void asyncHttpGet(final String url, RequestParams params) {
         mAsyncHttpClient.get(url, params, new AsyncHttpResponseHandler() {
 
             @Override
@@ -49,12 +49,12 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onGetFailed(arg3.getMessage());
+                onGetFailed(url, arg3.getMessage());
             }
         });
     }
 
-    public void asyncHttpGet(String url, Header[] headers, RequestParams params) {
+    public void asyncHttpGet(final String url, Header[] headers, RequestParams params) {
         mAsyncHttpClient.get(getApplicationContext(), url, headers, params, new AsyncHttpResponseHandler() {
 
             @Override
@@ -64,12 +64,12 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onGetFailed(arg3.getMessage());
+                onGetFailed(url,arg3.getMessage());
             }
         });
     }
 
-    public void asyncHttpPost(String url) {
+    public void asyncHttpPost(final String url) {
         mAsyncHttpClient.post(url, new AsyncHttpResponseHandler() {
 
             @Override
@@ -79,12 +79,12 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onPostFailed(arg3.getMessage());
+                onPostFailed(url, arg3.getMessage());
             }
         });
     }
 
-    public void asyncHttpPost(String url, RequestParams params) {
+    public void asyncHttpPost(final String url, RequestParams params) {
         mAsyncHttpClient.post(url, params, new AsyncHttpResponseHandler() {
 
             @Override
@@ -94,12 +94,12 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onPostFailed(arg3.getMessage());
+                onPostFailed(url, arg3.getMessage());
             }
         });
     }
 
-    public void asyncHttpPost(String url, HttpEntity entity, String contentType) {
+    public void asyncHttpPost(final String url, HttpEntity entity, String contentType) {
         mAsyncHttpClient.post(getApplicationContext(), url, entity, contentType, new AsyncHttpResponseHandler() {
 
             @Override
@@ -109,12 +109,12 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onPostFailed(arg3.getMessage());
+                onPostFailed(url, arg3.getMessage());
             }
         });
     }
 
-    public void asyncHttpPost(String url, Header[] headers, HttpEntity entity, String contentType) {
+    public void asyncHttpPost(final String url, Header[] headers, HttpEntity entity, String contentType) {
         mAsyncHttpClient.post(getApplicationContext(), url, headers, entity, contentType, new AsyncHttpResponseHandler() {
 
             @Override
@@ -124,12 +124,12 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onPostFailed(arg3.getMessage());
+                onPostFailed(url, arg3.getMessage());
             }
         });
     }
 
-    public void asyncHttpPost(String url, Header[] headers, RequestParams params, String contentType) {
+    public void asyncHttpPost(final String url, Header[] headers, RequestParams params, String contentType) {
         mAsyncHttpClient.post(getApplicationContext(), url, headers, params, contentType, new AsyncHttpResponseHandler() {
 
             @Override
@@ -139,12 +139,12 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onPostFailed(arg3.getMessage());
+                onPostFailed(url,arg3.getMessage());
             }
         });
     }
 
-    public void asyncHttpPost(String url, HttpEntity entity, String contentType, RequestParams params) {
+    public void asyncHttpPost(final String url, HttpEntity entity, String contentType, RequestParams params) {
         mAsyncHttpClient.post(getApplicationContext(), url, entity, contentType, new AsyncHttpResponseHandler() {
 
             @Override
@@ -154,7 +154,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onPostFailed(arg3.getMessage());
+                onPostFailed(url, arg3.getMessage());
             }
         });
     }
