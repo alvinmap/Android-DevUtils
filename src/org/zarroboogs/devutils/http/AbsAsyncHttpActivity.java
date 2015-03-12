@@ -34,7 +34,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onGetFailed(url,arg3.getMessage());
+                onGetFailed(url,arg3.getMessage() + "  CODE:" + arg0);
             }
         });
     }
@@ -49,7 +49,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onGetFailed(url, arg3.getMessage());
+                onGetFailed(url, arg3.getMessage() + "  CODE:" + arg0);
             }
         });
     }
@@ -64,7 +64,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onGetFailed(url,arg3.getMessage());
+                onGetFailed(url,arg3.getMessage() + "  CODE:" + arg0);
             }
         });
     }
@@ -79,7 +79,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onPostFailed(url, arg3.getMessage());
+                onPostFailed(url, arg3.getMessage() + "  CODE:" + arg0);
             }
         });
     }
@@ -94,7 +94,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onPostFailed(url, arg3.getMessage());
+                onPostFailed(url, arg3.getMessage() + "  CODE:" + arg0);
             }
         });
     }
@@ -109,7 +109,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onPostFailed(url, arg3.getMessage());
+                onPostFailed(url, arg3.getMessage() + "  CODE:" + arg0);
             }
         });
     }
@@ -124,7 +124,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onPostFailed(url, arg3.getMessage());
+                onPostFailed(url, arg3.getMessage() + "  CODE:" + arg0);
             }
         });
     }
@@ -139,7 +139,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onPostFailed(url,arg3.getMessage());
+                onPostFailed(url,arg3.getMessage() + "  CODE:" + arg0);
             }
         });
     }
@@ -154,7 +154,7 @@ public abstract class AbsAsyncHttpActivity extends Activity {
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-                onPostFailed(url, arg3.getMessage());
+                onPostFailed(url, arg3.getMessage() + "  CODE:" + arg0);
             }
         });
     }
