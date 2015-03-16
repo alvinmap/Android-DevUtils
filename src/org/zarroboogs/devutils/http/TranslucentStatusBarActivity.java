@@ -12,13 +12,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
+import android.support.v7.app.ActionBarActivity;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.ViewConfiguration;
 import android.view.Window;
 import android.view.WindowManager;
 
-public abstract class TranslucentStatusBarActivity extends Activity {
+public abstract class TranslucentStatusBarActivity extends ActionBarActivity {
 
     public abstract int getStatusBarColor();
     
