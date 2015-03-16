@@ -8,9 +8,7 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
-import android.app.Activity;
-
-public abstract class AbsAsyncHttpActivity extends Activity {
+public abstract class AbsAsyncHttpActivity extends TranslucentStatusBarActivity {
 
     private AsyncHttpClient mAsyncHttpClient = new AsyncHttpClient();
 
