@@ -1,6 +1,8 @@
 
 package org.zarroboogs.devutils.http;
 
+import java.io.UnsupportedEncodingException;
+
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 
@@ -21,13 +23,24 @@ public abstract class AbsAsyncHttpActivity extends TranslucentStatusBarActivity 
     public abstract void onGetFailed(String requestUrl, String error);
 
     public abstract void onRequestStart();
+    
+    private String encode = "UTF-8";
+    
+    public void setEnCode(String encode){
+    	this.encode = "gb2312";
+    }
 
     public void asyncHttpGet(final String url) {
         mAsyncHttpClient.get(url, new AsyncHttpResponseHandler() {
 
             @Override
             public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
-                onGetSuccess(new String(arg2));
+                try {
+					onGetSuccess(new String(arg2, encode));
+				} catch (UnsupportedEncodingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
 
             @Override
@@ -42,7 +55,12 @@ public abstract class AbsAsyncHttpActivity extends TranslucentStatusBarActivity 
 
             @Override
             public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
-                onGetSuccess(new String(arg2));
+                try {
+					onGetSuccess(new String(arg2, encode));
+				} catch (UnsupportedEncodingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
 
             @Override
@@ -57,7 +75,12 @@ public abstract class AbsAsyncHttpActivity extends TranslucentStatusBarActivity 
 
             @Override
             public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
-                onGetSuccess(new String(arg2));
+                try {
+					onGetSuccess(new String(arg2, encode));
+				} catch (UnsupportedEncodingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
 
             @Override
@@ -72,7 +95,12 @@ public abstract class AbsAsyncHttpActivity extends TranslucentStatusBarActivity 
 
             @Override
             public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
-                onPostSuccess(new String(arg2));
+                try {
+					onPostSuccess(new String(arg2, encode));
+				} catch (UnsupportedEncodingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
 
             @Override
@@ -87,7 +115,12 @@ public abstract class AbsAsyncHttpActivity extends TranslucentStatusBarActivity 
 
             @Override
             public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
-                onPostSuccess(new String(arg2));
+                try {
+					onPostSuccess(new String(arg2, encode));
+				} catch (UnsupportedEncodingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
 
             @Override
@@ -102,7 +135,12 @@ public abstract class AbsAsyncHttpActivity extends TranslucentStatusBarActivity 
 
             @Override
             public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
-                onPostSuccess(new String(arg2));
+                try {
+					onPostSuccess(new String(arg2, encode));
+				} catch (UnsupportedEncodingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
 
             @Override
@@ -117,7 +155,12 @@ public abstract class AbsAsyncHttpActivity extends TranslucentStatusBarActivity 
 
             @Override
             public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
-                onPostSuccess(new String(arg2));
+                try {
+					onPostSuccess(new String(arg2, encode));
+				} catch (UnsupportedEncodingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
 
             @Override
@@ -132,7 +175,12 @@ public abstract class AbsAsyncHttpActivity extends TranslucentStatusBarActivity 
 
             @Override
             public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
-                onPostSuccess(new String(arg2));
+                try {
+					onPostSuccess(new String(arg2, encode));
+				} catch (UnsupportedEncodingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
 
             @Override
@@ -147,7 +195,12 @@ public abstract class AbsAsyncHttpActivity extends TranslucentStatusBarActivity 
 
             @Override
             public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
-                onPostSuccess(new String(arg2));
+                try {
+					onPostSuccess(new String(arg2, encode));
+				} catch (UnsupportedEncodingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
 
             @Override
