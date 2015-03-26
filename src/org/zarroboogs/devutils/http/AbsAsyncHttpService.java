@@ -40,6 +40,10 @@ public abstract class AbsAsyncHttpService extends Service {
     	this.encode = "gb2312";
     }
 
+    public AsyncHttpClient getAsyncHttpClient(){
+    	return mAsyncHttpClient;
+    }
+    
     public void asyncHttpGet(final String url) {
         mAsyncHttpClient.get(url, new AsyncHttpResponseHandler() {
 
