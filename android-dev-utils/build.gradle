@@ -28,11 +28,15 @@ dependencies {
 
 ext {
     PUBLISH_GROUP_ID = 'org.zarrboogs.devutils'
-    PUBLISH_ARTIFACT_ID =  'android-dev-utils'
-    PUBLISH_VERSION = '0.0.1'
+    LIB_NAME = 'android-devutils'
+    PUBLISH_VERSION = '0.0.5'
 
+    WEBSITE_URL = 'https://github.com/andforce/Android-DevUtils'
+    ISSUE_TRACKER_URL = 'https://github.com/andforce/Android-DevUtils/issues'
+    VSC_URL = 'https://github.com/andforce/Android-DevUtils'
 }
+
 
 //apply from: 'https://raw.githubusercontent.com/andforce/release-android-lib-to-jcenter/master/jar.gradle'
 
-apply from: 'https://raw.githubusercontent.com/andforce/release-android-lib-to-jcenter/master/aar.gradle'
+apply from: 'test_aar.gradle'
