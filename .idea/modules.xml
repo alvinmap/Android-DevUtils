@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Android-Dev-Utils.iml" filepath="$PROJECT_DIR$/Android-Dev-Utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Android-DevUtils.iml" filepath="$PROJECT_DIR$/Android-DevUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-dev-utils/android-dev-utils.iml" filepath="$PROJECT_DIR$/android-dev-utils/android-dev-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

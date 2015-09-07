@@ -24,3 +24,15 @@ dependencies {
 
     compile 'com.loopj.android:android-async-http:1.4.6'
 }
+
+
+ext {
+    PUBLISH_GROUP_ID = 'org.zarrboogs.devutils'
+    PUBLISH_ARTIFACT_ID =  'android-dev-utils'
+    PUBLISH_VERSION = '0.0.1'
+
+}
+
+//apply from: 'https://raw.githubusercontent.com/andforce/release-android-lib-to-jcenter/master/jar.gradle'
+
+apply from: 'https://raw.githubusercontent.com/andforce/release-android-lib-to-jcenter/master/aar.gradle'
