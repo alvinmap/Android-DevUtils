@@ -1,2 +1,0 @@
-# DevUtils
-android dev utils
